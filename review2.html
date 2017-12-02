@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Review 2</title>
+		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Barlow+Semi+Condensed|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		
+		<header>
+<!------- Header Logo und text ------>		
+
+			<div class="Logo-Con"> 
+				<ul class="CodeLogo">
+					<li class="logo">
+						<img  src="img/cr2-logo.png" alt="logo" width="40px">
+					</li>
+					<li class="text">
+						<p > <b class="überschrift"> Price comparson </b> </p>
+					</li>
+				</ul>
+		
+			</div>
+		</header>
+
+<!------- Bild mit Preis ------>		
+
+		<section class="BildPreis">
+			<article>
+				<figure class="Amsterdam">
+					<img class="BildAms" src="img/cr2-amsterdam.jpg" alt="Bild1" width="400px">
+					<figcation> 
+						
+						<div class="groß kein">
+							<div>
+								<p class="türkis"> Amsterdam </p>
+							</div>
+							<div>
+								<p id="zahl1"></p>
+							</div>
+						</div>
+
+						<div class="kein">
+							<div>
+								<p class="inline"> Netherlands </p>
+							</div>
+							<div>
+								<p class="inline"> Average price</p>
+							</div>
+						</div>	
+					 </figcation> 	
+				</figure>
+			</article>
+			<article>
+				<figure class="London">
+					<img class="BildLon" src="img/cr2-london.jpg" alt="Bild2" width="400px">
+					<figcation> 		
+						<div class="groß kein">
+							
+							<div>
+								<p class="türkis"> London </p>
+							</div>
+							<div>
+								<p id="zahl2"></p>
+							</div>
+							
+						</div>
+
+						<div class="kein">
+							
+							<div>
+								<p class="inline"> United Kingdom </p>
+							</div>
+							<div>
+								<p class="inline"> Average price </p>
+							</div>
+							
+						</div>	
+					</figcation>
+				</figure>
+			</article>
+		</section>
+
+
+	<div class="mitte">
+		<p class="textl" id="print"></p>
+		<p class="lastT">Difference in price</p>
+
+	</div>
+	
+<!------- *************  button ****************** ------>		
+
+	
+	<div>
+		<button id="button" onclick="averagePrice()">  </button>
+	</div>	
+
+	<script>
+		function averagePrice(){
+			var amsterdamPrices = [1500,500,1800,700];
+	    	var londonPrices = [2500,1500,1000,900];
+			
+			function getAveragePrice(prices){
+			 	var sum = 0;
+			 	prices.forEach(function(price){
+			 		sum += price;
+			 	});
+			 	return sum / prices.length;
+			 }
+			 var averagePriceAmsterdam = getAveragePrice(amsterdamPrices);
+			 var averagePriceLondon = getAveragePrice(londonPrices);
+			 var difference = averagePriceLondon - averagePriceAmsterdam;
+			 var differenceAbs = Math.abs(difference);
+			 //damit keine minuszahlen kommt math.abs
+
+			 document.getElementById('zahl1').innerHTML=averagePriceAmsterdam;
+			 document.getElementById('zahl2').innerHTML=averagePriceLondon;
+			 document.getElementById('button').innerHTML=Math.abs(difference)+'€';
+			 
+			 var city1, city2;
+			 if(difference > 0){
+			 	city1 ='London';
+			 	city2='Amsterdam';
+			 }else{
+			 	city2 ='London';
+			 	city1='Amsterdam';
+			 }
+			var text =  city1  + ' will be more affordable than '  + city2 + ' for the New Year´s celebration';
+			document.getElementById('print').innerHTML=(text);
+		}
+		
+	</script>
+	
+	</body>
+</html>

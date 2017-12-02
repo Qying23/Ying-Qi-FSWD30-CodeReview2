@@ -1,0 +1,130 @@
+html{
+	background-color: 	#DBE4F0;
+}
+
+body{
+	width: 960px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/********************* header logo mit text ********************/
+
+header{
+	height: 60px;
+	background-color:#002466 ;
+}
+
+li{
+	border: 0px solid;	
+	float: left;
+	display: inline;
+}
+
+li p{ /********** h sind automatisch blocks und müssen deswegen umgeschrieben werden ***************/
+	padding-top: 5px;
+	color: white;
+	font-family: 'Barlow', sans-serif;
+	font-size: 25px;
+}
+
+.logo{
+	margin-top: 10px;
+}
+
+.text{
+	margin-left: 25px;
+	margin-top: -15px;
+	letter-spacing: 1.5px;
+}
+
+/********************* header logo mit text ********************/
+
+
+.BildPreis{
+	background-color: #DBE4F0;
+	max-width: 1300px;
+	margin: 30px auto 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.London{
+	background-color: white;
+}
+
+.Amsterdam{
+	background-color: white;
+}
+
+figcation{
+	color: #B2B2B2;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	letter-spacing: 1.5px;
+	
+}
+.groß{
+	font-size: 30px;
+}
+
+.türkis{
+	color:#1fb2df ;
+	margin: 0px;
+	border: 0px;
+
+}
+
+#zahl1{
+	margin: 0px;
+	border: 0px;
+}
+#zahl2{
+	margin: 0px;
+	border: 0px;
+}
+.inline{
+	margin: 0px;
+	border: 0px;
+}
+p{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+}
+
+.kein{
+	display: flex;
+	justify-content: space-between;
+
+}
+.mitte{
+	color: grey;
+	letter-spacing: 2px;
+	text-align: center;
+
+}
+.lastText{
+
+
+}
+
+/********************* button ********************/
+
+button{
+	margin:43.5%; /*** button in der mitte ***/
+	text-align: center; /*** text vombutton in der mitte ***/
+	margin-top: 60px; /*** Außenabstand nach oben ****/
+	padding: 20px 60px; /*** 10px unten&oben und 30 links&rechts innerhalb von button***/
+	
+	color: white;
+	background-color: #1fb2df;
+	box-shadow: 0px 17px 10px -7px
+	rgba(0, 0, 0, 0.4);
+
+	border-radius: 5px;
+
+	font-size: 30px;
+}
+
+
+
